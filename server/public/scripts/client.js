@@ -10,9 +10,7 @@ function readyNow() {
 var add = $('.add')
 
 var dataToCalculate = {
-    valueOne: $('.firstValue').val();
-    valueTwo: $('.secondValue').val();
-    mathFunction: 
+    
 }
 
 function doMath() {

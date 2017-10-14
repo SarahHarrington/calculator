@@ -6,33 +6,62 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calculator</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css">
     <script src="vendors/jquery-3.2.1.min.js"></script>
     <script src="scripts/client.js"></script>
 </head>
 <!-- Body Begin -->
 <body>
-    <h1>Calculator!</h1>
+    <h1>Calculator!<i class="fa fa-calculator" aria-hidden="true"></i></h1>
     
     <div class="resultsDisplay"> <!-- Results Display -->
         I display results! 
     </div> <!-- End Results Display -->
     
     <div class="inputs"> <!-- Input Area -->
-        <div class="inputOne"> <!-- Input One -->
-            First: <input class="firstValue" type="text">
+        <div class="numBtn"> <!-- Input One -->
+            <button class="nine">9</button>
         </div>
-        <div class="inputTwo">
-            Second: <input class="secondValue" type="text">
+        <div class="numBtn">
+            <button class="eight">8</button>
+        </div>
+        <div class="numBtn">
+            <button class="seven">7</button>
+        </div><br>
+        <div class="numBtn">
+            <button class="six">6</button>
+        </div>
+        <div class="numBtn">
+            <button class="five">5</button>
+        </div>
+        <div class="numBtn">
+            <button class="four">4</button>
+        </div><br>
+        <div class="numBtn">
+            <button class="three">3</button>
+        </div>
+        <div class="numBtn">
+            <button class="two">2</button>
+        </div>
+        <div class="numBtn">
+            <button class="one">1</button>
+        </div><br>
+        <div class="numBtn">
+            <button class="zero">0</button>
         </div>
     </div> <!-- End Input Area -->
     
     <div class="mathFunctionSelector"> <!-- Math Function Selector -->
-        <div class="mathFunction"> <button class="add">Add</button></div>
-        <div class="mathFunction subtract"> <button>Subtract</button></div>
-        <div class="mathFunction multiply">Multiply</div>
-        <div class="mathFunction divide">Divide</div>
+        <div class="mathFunction"><button class="add">Add</button></div>
+        <div class="mathFunction"><button class="subtract">Subtract</button></div>
+        <div class="mathFunction"><button class="multiply">Multiply</button></div>
+        <div class="mathFunction divide"><button class="divide">Divide</button></div>
     </div> <!-- End Math Function Selector -->
     
+    <div class="backBtnArea">
+        <button class="backButton">Back</button>
+    </div>
+
     <div class="equalsBtnArea"><!-- Delete Button -->
         <button class="equalsButton">=</button>
     </div> <!-- End Delete Button -->
