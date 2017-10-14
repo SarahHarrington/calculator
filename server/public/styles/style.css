@@ -1,13 +1,7 @@
-.resultsDisplay {
+.display {
     border: 1px solid black;
     height: 50px;
     width: 200px;
-}
-
-.mathFunction {
-    border: 1px solid black;
-    height: 50px;
-    width: 50px;
 }
 
 .numBtnDiv {
