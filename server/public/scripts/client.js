@@ -4,15 +4,10 @@ $(document).ready(readyNow);
 
 function readyNow() {
     console.log('jquery loaded');
-    $('.equalsButton').on('click', doMath);
+    $('.numBtn').on('click', numToInput)
 }
 
-var add = $('.add')
-
-var dataToCalculate = {
+function numToInput() {
+    console.log($(this).val());
     
-}
-
-function doMath() {
-
 }
