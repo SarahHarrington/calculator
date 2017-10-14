@@ -4,33 +4,20 @@ $(document).ready(readyNow);
 
 function readyNow() {
     console.log('jquery loaded');
-    $('.numBtn').on('click', numToInput);
-    $('.mathFunction').on('click', mathFunction);
+    $('.calcBtn').on('click', arrayToCalculate);
+    //$('.backButton').on('.click', backValue);
 }
 
 //number inputs being pushed
-var inputOne = [];
-function numToInput() {
-    var numberPushedOne = $(this).val()
-    //console.log(numberPushed);
-    $('.display').append(numberPushedOne);
-    inputOne.push(numberPushedOne);
-    console.log(inputOne);
+var calculationArray = [];
+function arrayToCalculate() {
+    var calcButton = $(this).val();
+    //var mathFunction = $(this).val();
+    $('.display').append(calcButton);
+    calculationArray.push(calcButton);
+    $('.backButton').on('.click', backValue);
 }
 
-var mathFun;
-function mathFunction(){
-    var mathFunction = $(this).val();
-    $('.display').empty();
-    mathFun = mathFunction;
-   
+function backValue() {
+    
 }
-
-numberPushedTwo
-var numberPushedTwo = $(this).val();
-var numberPushedTwo = $(this).val();
-console.log(mathFunction);
-$('.display').empty();
-$('.display').append(numberPushedTwo);
-inputTwo.push(numberPushedTwo);
-console.log(inputTwo);
