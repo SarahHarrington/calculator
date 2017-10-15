@@ -62,11 +62,14 @@ body {
 
 .history {
     height: auto;
-    width: 250px;
+    width: 230px;
     display: flex;
     justify-content: center;
     font-family: 'Cutive Mono', monospace;
     font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
 }
 
 .functionHistory {
