@@ -12,79 +12,88 @@
 </head>
 <!-- Body Begin -->
 <body>
-    <h1>Calculator!<i class="fa fa-calculator" aria-hidden="true"></i></h1>
-    
-    <div class="display"> <!-- Results Display -->
-         <div class="valueOneDiv">
-             <span class="valueOne"></span>
-            </div><br>
-        <div class="valueTwoDiv">
-            <span class="valueTwo"></span>
-        </div><br>
-        <div class="valueThreeDiv">
-            <span class="valueThree"></span>
+    <div class="container"><!-- Calculator Container -->
+        
+        <div class="header">
+            <div>Calc-u-later</div>
         </div>
-    </div> <!-- End Results Display -->
+        
+            <div class="display"> <!-- Results Display -->
+            </div> <!-- End Results Display -->
+        
+            <div class="inputs"> <!-- Input Area -->
+            <div class="numberPad">
+                <div class="numRow"> <!-- Top Row -->
+                    <div class="numBtnDiv"> <!-- Input One -->
+                        <button class="numBtn" value="7">7</button>
+                    </div>
+                    <div class="numBtnDiv">
+                        <button class="numBtn" value="8">8</button>
+                    </div>
+                    <div class="numBtnDiv">
+                        <button class="numBtn" value="9">9</button>
+                    </div>
+                </div>
+                
+                <div class="numRow"> <!-- Middle Row -->
+                    <div class="numBtnDiv">
+                        <button class="numBtn" value="4">4</button>
+                    </div>
+                    <div class="numBtnDiv">
+                        <button class="numBtn" value="5">5</button>
+                    </div>
+                    <div class="numBtnDiv">
+                        <button class="numBtn" value="6">6</button>
+                    </div>
+                </div> 
+                
+                <div class="numRow"> <!-- Bottom Row -->
+                    <div class="numBtnDiv">
+                        <button class="numBtn" value="1">1</button>
+                    </div>
+                    <div class="numBtnDiv">
+                        <button class="numBtn" value="2">2</button>
+                    </div>
+                    <div class="numBtnDiv">
+                        <button class="numBtn" value="3">3</button>
+                    </div>
+                </div>
+                
+                <div class="numRow">
+                    <div class="numBtnDiv">
+                        <button class="numBtn" value=> </button>
+                    </div>
+                    <div class="numBtnDiv">
+                        <button class="numBtn" value="0">0</button>
+                    </div>
+                    <div class="numBtnDiv">
+                        <button class="numBtn" value=".">.</button>
+                    </div>
+                </div>
+            </div>        
+        
+        <div class="mathFunctionSelector"> <!-- Math Function Selector -->
+            <div class="funBtnDiv"><button class="mathBtn" value="+">+</button></div>
+            <div class="funBtnDiv"><button class="mathBtn" value="-">-</button></div>
+            <div class="funBtnDiv"><button class="mathBtn" value="*">x</button></div>
+            <div class="funBtnDiv"><button class="mathBtn" value="/">/</button></div>
+            <div class="equalsBtnArea"><button class="equalsButton">=</button></div>   
+        </div> <!-- End Math Function Selector -->
+        <div class="miscButtons">
+            <div class="backBtnArea">
+                <button class="backButton">Back</button>
+            </div>
+            <div class="clearBtnArea"> <!-- Clear Button -->
+                <button class="clearButton">CLEAR IT</button>
+            </div> <!-- Clear Button -->
+        </div>
+        </div>
+        <!-- End Input Area -->
+        </div> <!-- END Calculator Container -->
 
-    <div class="history"> <!-- History -->
+    <div class="history"><!-- History -->
         <div class="functionHistory"></div>
         <div class="totalHistory"></div>
-    </div> <!-- End of History -->
-
-    <div class="inputs"> <!-- Input Area -->
-        <div class="numBtnDiv"> <!-- Input One -->
-            <button class="seven numBtn calcBtn" value="7">7</button>
-        </div>
-        <div class="numBtnDiv">
-            <button class="eight numBtn calcBtn" value="8">8</button>
-        </div>
-        <div class="numBtnDiv">
-            <button class="nine numBtn calcBtn" value="9">9</button>
-        </div><br>
-        <div class="numBtnDiv">
-            <button class="four numBtn calcBtn" value="4">4</button>
-        </div>
-        <div class="numBtnDiv">
-            <button class="five numBtn calcBtn" value="5">5</button>
-        </div>
-        <div class="numBtnDiv">
-            <button class="six numBtn calcBtn" value="6">6</button>
-        </div><br>
-        <div class="numBtnDiv">
-            <button class="one numBtn calcBtn" value="1">1</button>
-        </div>
-        <div class="numBtnDiv">
-            <button class="two numBtn calcBtn" value="2">2</button>
-        </div>
-        <div class="numBtnDiv">
-            <button class="three numBtn calcBtn" value="3">3</button>
-        </div><br>
-        <div class="numBtnDiv">
-            <button class="zero numBtn calcBtn" value="0">0</button>
-        </div>
-        <div class="numBtnDiv">
-            <button class="point numBtn calcBtn" value=".">.</button>
-        </div>
-    </div> <!-- End Input Area -->
-    
-    <div class="mathFunctionSelector"> <!-- Math Function Selector -->
-        <div class="funBtnDiv"><button class="mathBtn calcBtn" value="+">+</button></div>
-        <div class="funBtnDiv"><button class="mathBtn calcBtn" value="-">-</button></div>
-        <div class="funBtnDiv"><button class="mathBtn calcBtn" value="*">x</button></div>
-        <div class="funBtnDiv"><button class="mathBtn calcBtn" value="/">/</button></div>
-    </div> <!-- End Math Function Selector -->
-    
-    <div class="backBtnArea">
-        <button class="backButton">Back</button>
-    </div>
-
-    <div class="equalsBtnArea"><!-- Delete Button -->
-        <button class="equalsButton">=</button>
-    </div> <!-- End Delete Button -->
-    
-    <div class="clearBtnArea"> <!-- Clear Button -->
-        <button class="clearButton">CLEAR IT</button>
-    </div> <!-- Clear Button -->
-
+    </div><!-- End of History -->
 </body>
 </html>

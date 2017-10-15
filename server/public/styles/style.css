@@ -1,15 +1,79 @@
-.display {
-    border: 1px solid black;
-    height: 50px;
-    width: 200px;
+body {
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
 }
 
-.numBtnDiv {
-    display: inline-flex;
+.container {
+    border: 1px solid black;
+    width: 300px;
+    height: 400px;
+    background-color: yellow;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: green;
+    height: 50px;
+    font-size: 40px;
+}
+
+.inputs {
+    display: inline-block;
+}
+
+.display {
+    width: 250px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: pink;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .history {
     border: 1px solid black;
-    height: 100px;
-    width: 200px;
+    height: 400px;
+    width: 300px;
+    background-color: orange;
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.numRow {
+    display: flex;
+    justify-content: center;
+}
+
+.numberPad {
+    border: 1px solid black;
+    width: 140px;
+    height: 180px;
+    background-color: red;
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.numBtn {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
+
+.mathFunctionSelector {
+    display: inline-block;
+    background-color: blue;
+    width: 30px;
+}
+
+.miscButtons {
+    background-color: purple;
+    width: auto;
+    display: inline-block;
 }

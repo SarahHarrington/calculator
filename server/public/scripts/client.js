@@ -12,7 +12,7 @@ function readyNow() {
 //array for button pushes to go in to as strings
 var calcArray = [""];
 
-//collects the numbers pushed to array
+//collects the numbers as strings, pushes to calcArray
 function numbers() {
     var numBtn = $(this).val();
     //appending to the end of the string
@@ -20,7 +20,7 @@ function numbers() {
     updateDisplay();
 }
 
-//collects math functions
+//collects math functions as strings, pushes to calcArray
 function calculation() {
     var mathBtn = $(this).val();
     calcArray.push(mathBtn);
@@ -32,15 +32,19 @@ function updateDisplay() {
     $('.display').text(calcArray.join(""));
 }
 
+//clears the display
 function clearDisplay() {
     $('.display').empty();
-}
-
-function clearButton() {
-    clearDisplay();
     calcArray = [''];
 }
 
+//clears existing operations
+function clearButton() {
+    clearDisplay();
+    //calcArray = [''];
+}
+
+//back numbers out, ends at operator
 function backBtn() {
     console.log('back clicked');
     var calcString = calcArray.pop();
@@ -49,6 +53,7 @@ function backBtn() {
     updateDisplay();
 }
 
+//appends calcArray to history
 function appendFunctionToHistory() {
     var fullFunction = calcArray.join('');
     $('.functionHistory').append('<div>' + fullFunction + '=</div>')
@@ -59,20 +64,19 @@ function equalsFunction() {
     var dataForServer = {
         allData: calcArray
     }
-    console.log('data for server', dataForServer);
     $.ajax({
         method: 'POST',
         url: '/allData',
         data: dataForServer
     })
+    //receives response and appends to the DOM
     .done(function(response) {
         console.log('response', response);
-        appendFunctionToHistory();
-        clearDisplay();
+        appendFunctionToHistory(); //appends function sent to DOM
+        clearDisplay(); //clears display
         totalToDisplay = response.totalSent;
         $('.display').text(totalToDisplay);
-        $('.totalHistory').append('<div>' + totalToDisplay + '</div>')
-        calcArray = [''];
+        $('.totalHistory').append('<div>' + totalToDisplay + '</div>')//appends total to DOM
     })
     .fail(function(message) {
         console.log('message', message);

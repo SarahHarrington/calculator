@@ -1,35 +1,31 @@
+//server set up code
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var port = 5000;
 
+//app stuff
 app.use(bodyParser.urlencoded({ extended: true }));
-
 app.use(express.static('server/public'));
 
+//server listening
 app.listen(port, function() {
     console.log('listening on port', port);
 })
 
+//server post
 app.post('/alldata', function(req, res){
-    var mathArray = req.body;
-    console.log('mathArray', mathArray);
-    
-    var arrayToCalculate = mathArray.allData;
-    console.log('arrayToCalculate', arrayToCalculate);
+    var mathArray = req.body; //data coming through body-parser
+    var arrayToCalculate = mathArray.allData; // 
 
+    //while loop for math functions
     while (arrayToCalculate.length > 1) {
-        var a = parseFloat(arrayToCalculate.shift());
-        console.log('a', a);
-        
+        var a = parseFloat(arrayToCalculate.shift()); //changes value to number
         var b = arrayToCalculate.shift();
-        console.log('b', b);
-        
-        var c = parseFloat(arrayToCalculate.shift());
-        console.log('c', c);
+        var c = parseFloat(arrayToCalculate.shift()); //changes value to number
         
         var total = 0;
-        switch(b) {
+        switch(b) { // parses out the math function and completes it
             case '+':
                 total = a + c;
                 break;
@@ -45,9 +41,8 @@ app.post('/alldata', function(req, res){
             default:
                 console.log('this is not valid');
         }
-        arrayToCalculate.unshift('' + total);
+        arrayToCalculate.unshift('' + total); //puts the totalled number back on the front
     }
-    console.log('total', total);
     
     var totalSendBack = {
         totalSent: total
