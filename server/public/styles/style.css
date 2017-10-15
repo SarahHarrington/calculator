@@ -56,7 +56,7 @@ body {
     width: 140px;
     height: 180px;
     background-color: red;
-    padding-top: 10px;
+    padding-top: 20px;
     display: inline-block;
 }
 
@@ -70,10 +70,12 @@ body {
     display: inline-block;
     background-color: blue;
     width: 30px;
+    height: 180px;
 }
 
 .miscButtons {
     background-color: purple;
     width: auto;
-    display: inline-block;
+    display: inline;
+    height: 180px;
 }
