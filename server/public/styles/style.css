@@ -47,14 +47,17 @@ body {
 }
 
 .display {
-    width: 230px;
-    height: 50px;
+    width: 220px;
+    height: 30px;
     border: 2px solid #2E271F;
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: #F6FBF5;
     border-radius: 5px;
+    padding-top: 20px;
+    padding-left: 10px;
+    font-family: 'Oswald', sans-serif;
 }
 
 .history {
@@ -107,22 +110,25 @@ body {
     border: none;
 }
 
-.numBtn {
-    width: 40px;
-    height: 40px;
-    font-family: 'Bowlby One SC', cursive;
-    font-size: 24px;
-    background-color: #665C4A;
+button {
+    font-family: 'Oswald', sans-serif;
     border-radius: 5px;
     border: none;
     color: #C9BFA5;
 }
 
-.numBtn:hover {
+.numBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    background-color: #665C4A;
+}
+
+button:hover {
     background-color: #524A3B;
 }
 
-.numBtn:active {
+button:active {
     background-color: #524A3B;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
@@ -148,6 +154,7 @@ body {
 .mathBtn, .equalsButton {
     height: 25px;
     width: 25px;
+    background-color: #302920;
 }
 
 .miscButtons {
@@ -163,6 +170,7 @@ body {
     height: 30px;
     width: 50px;
     margin: 2px;
+    background-color: #302920;
 }
 
 .allInputs {
