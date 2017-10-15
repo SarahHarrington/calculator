@@ -13,29 +13,43 @@ app.listen(port, function() {
 
 app.post('/alldata', function(req, res){
     var mathArray = req.body;
+    console.log('mathArray', mathArray);
+    
     var arrayToCalculate = mathArray.allData;
     console.log('arrayToCalculate', arrayToCalculate);
-    
-    var a = parseInt(arrayToCalculate[0]);
-    var b = parseInt(arrayToCalculate[2]);
-    var total = 0;
-    switch(arrayToCalculate[1]) {
-        case '+':
-            total = a + b;
-            break;
-        case '-':
-            total = a - b;
-            break;
-        case '*':
-            total = a * b;
-            break;
-        case '/':
-            total = a / b;
-            break;
-        default:
-            console.log('this is not valid');
+
+    while (arrayToCalculate.length > 1) {
+        var a = parseFloat(arrayToCalculate.shift());
+        console.log('a', a);
+        
+        var b = arrayToCalculate.shift();
+        console.log('b', b);
+        
+        var c = parseFloat(arrayToCalculate.shift());
+        console.log('c', c);
+        
+        var total = 0;
+        switch(b) {
+            case '+':
+                total = a + c;
+                break;
+            case '-':
+                total = a - c;
+                break;
+            case '*':
+                total = a * c;
+                break;
+            case '/':
+                total = a / c;
+                break;
+            default:
+                console.log('this is not valid');
+        }
+        arrayToCalculate.unshift('' + total);
     }
-    totalSendBack = {
+    console.log('total', total);
+    
+    var totalSendBack = {
         totalSent: total
     }
     res.send(totalSendBack);
