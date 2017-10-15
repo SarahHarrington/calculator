@@ -1,25 +1,45 @@
 body {
-    max-width: 700px;
-    display: flex;
-    justify-content: center;
+    margin: 0;
 }
 
 .container {
-    border: 1px solid black;
-    width: 300px;
-    height: 400px;
-    background-color: yellow;
-    display: inline-block;
-    margin-right: 10px;
-    padding: 5px;
+    width: 550px;
+    height: 500px;
+    display: flex;
+}
+
+.left {
+    align-self: left;
+    width: 250px;
+    height: 320px;
+    float: left;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: #453A2E;
+    border-radius: 5px;
+}
+
+.right {
+   align-self: right;
+   width: 250px;
+   height: 320px;
+   float: right;
+   margin: 0 auto;
+   margin-top: 10px;
+   background-color: #453A2E;
+   color: white;
+   border-radius: 5px;
+   padding-left: 2px;
+   padding-right: 2px;
 }
 
 .header {
-    display: flex;
-    justify-content: center;
-    background-color: green;
     height: 50px;
+    width: auto;
     font-size: 40px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #F6FBF5;
 }
 
 .inputs {
@@ -27,55 +47,125 @@ body {
 }
 
 .display {
-    width: 250px;
+    width: 230px;
     height: 50px;
-    border: 1px solid black;
-    background-color: pink;
+    border: 2px solid #2E271F;
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
+    background-color: #F6FBF5;
+    border-radius: 5px;
 }
 
 .history {
-    border: 1px solid black;
-    height: 400px;
-    width: 300px;
-    background-color: orange;
+    height: auto;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Cutive Mono', monospace;
+    font-size: 14px;
+}
+
+.functionHistory {
+    height: auto;
+    width: 280px;
     display: inline-block;
-    margin-left: 10px;
-    padding: 5px;
+}
+
+.function {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; 
+}
+
+.totalHistory {
+    height: auto;
+    width: 120px;
+    display: inline-block;
+}
+
+.total {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; 
 }
 
 .numRow {
     display: flex;
     justify-content: center;
+    margin: 2px;
 }
 
 .numberPad {
-    border: 1px solid black;
     width: 140px;
-    height: 180px;
-    background-color: red;
-    padding-top: 20px;
+    height: 188px;
     display: inline-block;
+    margin: 0 auto;
+    margin-left: 5px;
+    background-color: #302920;
+    border-radius: 5px;
+    border: none;
 }
 
 .numBtn {
     width: 40px;
     height: 40px;
-    padding: 10px;
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 24px;
+    background-color: #665C4A;
+    border-radius: 5px;
+    border: none;
+    color: #C9BFA5;
+}
+
+.numBtn:hover {
+    background-color: #524A3B;
+}
+
+.numBtn:active {
+    background-color: #524A3B;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.numBtnDiv {
+    margin: 2px;
 }
 
 .mathFunctionSelector {
     display: inline-block;
-    background-color: blue;
     width: 30px;
-    height: 180px;
+    height: 188px;
+    margin: 0 auto;
+    align-items: center;
+    padding-top: 3px;
+}
+
+.funBtnDiv, .equalsBtnArea{
+    margin: 2px;
+}
+
+.mathBtn, .equalsButton {
+    height: 25px;
+    width: 25px;
 }
 
 .miscButtons {
-    background-color: purple;
-    width: auto;
-    display: inline;
-    height: 180px;
+    width: 54px;
+    display: inline-block;
+    font-size: 8px;
+    margin: 0 auto;
+    height: 188px;
+    padding-top: 3px;
+}
+
+.backButton, .clearButton {
+    height: 30px;
+    width: 50px;
+    margin: 2px;
+}
+
+.allInputs {
+    display: flex;
+    justify-content: center;
 }

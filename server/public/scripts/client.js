@@ -56,7 +56,7 @@ function backBtn() {
 //appends calcArray to history
 function appendFunctionToHistory() {
     var fullFunction = calcArray.join('');
-    $('.functionHistory').append('<div>' + fullFunction + '=</div>')
+    $('.functionHistory').append('<div class="function">' + fullFunction + '=</div>')
 }
 
 //sends data to server
@@ -76,7 +76,7 @@ function equalsFunction() {
         clearDisplay(); //clears display
         totalToDisplay = response.totalSent;
         $('.display').text(totalToDisplay);
-        $('.totalHistory').append('<div>' + totalToDisplay + '</div>')//appends total to DOM
+        $('.totalHistory').append('<div class="total">' + totalToDisplay + '</div>')//appends total to DOM
     })
     .fail(function(message) {
         console.log('message', message);

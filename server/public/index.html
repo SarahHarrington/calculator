@@ -6,94 +6,109 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calculator</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Cutive+Mono|Libre+Barcode+39+Extended+Text|Oswald" rel="stylesheet">
     <script src="vendors/jquery-3.2.1.min.js"></script>
     <script src="scripts/client.js"></script>
 </head>
 <!-- Body Begin -->
 <body>
     <div class="container"><!-- Calculator Container -->
-        
-        <div class="header">
-            <div>Calc-u-later</div>
-        </div>
-        
-            <div class="display"> <!-- Results Display -->
-            </div> <!-- End Results Display -->
-        
-            <div class="inputs"> <!-- Input Area -->
-            <div class="numberPad">
-                <div class="numRow"> <!-- Top Row -->
-                    <div class="numBtnDiv"> <!-- Input One -->
-                        <button class="numBtn" value="7">7</button>
+        <div class="left">
+            <div class="header">Calc-u-later</div>
+            
+            <div class="display"></div> <!-- Input and Results Display -->
+                <div class="allInputs">
+                <div class="numberPad"> <!-- Number Pad -->
+                    
+                    <div class="numRow"> <!-- Top Num Row 7 8 9 -->
+                        <div class="numBtnDiv">
+                            <button class="numBtn" value="7">7</button>
+                        </div>
+                        <div class="numBtnDiv">
+                            <button class="numBtn" value="8">8</button>
+                        </div>
+                        <div class="numBtnDiv">
+                            <button class="numBtn" value="9">9</button>
+                        </div>
                     </div>
-                    <div class="numBtnDiv">
-                        <button class="numBtn" value="8">8</button>
+                    
+                    <div class="numRow"> <!-- Middle Num Row 4 5 6-->
+                        <div class="numBtnDiv">
+                            <button class="numBtn" value="4">4</button>
+                        </div>
+                        <div class="numBtnDiv">
+                            <button class="numBtn" value="5">5</button>
+                        </div>
+                        <div class="numBtnDiv">
+                            <button class="numBtn" value="6">6</button>
+                        </div>
+                    </div> 
+                    
+                    <div class="numRow"> <!-- Bottom Num Row 3 2 1-->
+                        <div class="numBtnDiv">
+                            <button class="numBtn" value="1">1</button>
+                        </div>
+                        <div class="numBtnDiv">
+                            <button class="numBtn" value="2">2</button>
+                        </div>
+                        <div class="numBtnDiv">
+                            <button class="numBtn" value="3">3</button>
+                        </div>
                     </div>
-                    <div class="numBtnDiv">
-                        <button class="numBtn" value="9">9</button>
+                    
+                    <div class="numRow"> <!-- blank 0 . -->
+                        <div class="numBtnDiv">
+                            <button class="numBtn" value=> </button>
+                        </div>
+                        <div class="numBtnDiv">
+                            <button class="numBtn" value="0">0</button>
+                        </div>
+                        <div class="numBtnDiv">
+                            <button class="numBtn" value=".">.</button>
+                        </div>
                     </div>
-                </div>
                 
-                <div class="numRow"> <!-- Middle Row -->
-                    <div class="numBtnDiv">
-                        <button class="numBtn" value="4">4</button>
-                    </div>
-                    <div class="numBtnDiv">
-                        <button class="numBtn" value="5">5</button>
-                    </div>
-                    <div class="numBtnDiv">
-                        <button class="numBtn" value="6">6</button>
-                    </div>
+                </div> <!-- End Number Pad -->    
+            
+            <div class="mathFunctionSelector"> <!-- Math Function Selector -->
+                <div class="funBtnDiv">
+                    <button class="mathBtn" value="+">+</button>
+                </div>
+                <div class="funBtnDiv">
+                    <button class="mathBtn" value="-">-</button>
+                </div>
+                <div class="funBtnDiv">
+                    <button class="mathBtn" value="*">x</button>
+                </div>
+                <div class="funBtnDiv">
+                    <button class="mathBtn" value="/">/</button>
+                </div>
+                <div class="equalsBtnArea">
+                    <button class="equalsButton">=</button>
+                </div>   
+            </div> <!-- End Math Function Selector -->
+            
+            <div class="miscButtons"> <!-- Misc Buttons -->
+                <div class="backBtnArea">
+                    <button class="backButton">Back</button>
+                </div>
+                <div class="clearBtnArea"> 
+                    <button class="clearButton">CLEAR</button>
                 </div> 
-                
-                <div class="numRow"> <!-- Bottom Row -->
-                    <div class="numBtnDiv">
-                        <button class="numBtn" value="1">1</button>
-                    </div>
-                    <div class="numBtnDiv">
-                        <button class="numBtn" value="2">2</button>
-                    </div>
-                    <div class="numBtnDiv">
-                        <button class="numBtn" value="3">3</button>
-                    </div>
-                </div>
-                
-                <div class="numRow">
-                    <div class="numBtnDiv">
-                        <button class="numBtn" value=> </button>
-                    </div>
-                    <div class="numBtnDiv">
-                        <button class="numBtn" value="0">0</button>
-                    </div>
-                    <div class="numBtnDiv">
-                        <button class="numBtn" value=".">.</button>
-                    </div>
-                </div>
-            </div>        
-        
-        <div class="mathFunctionSelector"> <!-- Math Function Selector -->
-            <div class="funBtnDiv"><button class="mathBtn" value="+">+</button></div>
-            <div class="funBtnDiv"><button class="mathBtn" value="-">-</button></div>
-            <div class="funBtnDiv"><button class="mathBtn" value="*">x</button></div>
-            <div class="funBtnDiv"><button class="mathBtn" value="/">/</button></div>
-            <div class="equalsBtnArea"><button class="equalsButton">=</button></div>   
-        </div> <!-- End Math Function Selector -->
-        <div class="miscButtons">
-            <div class="backBtnArea">
-                <button class="backButton">Back</button>
-            </div>
-            <div class="clearBtnArea"> <!-- Clear Button -->
-                <button class="clearButton">CLEAR IT</button>
-            </div> <!-- Clear Button -->
-        </div>
-        </div>
-        <!-- End Input Area -->
-        </div> <!-- END Calculator Container -->
-
-    <div class="history"><!-- History -->
-        <div class="functionHistory"></div>
-        <div class="totalHistory"></div>
-    </div><!-- End of History -->
+            </div> <!-- End Misc Buttons -->
+            </div>  
+        </div> <!-- End Left Column -->   
+            
+        <div class="right"> <!-- Right Column -->
+    
+            <div class="history"><!-- History -->
+                <div class="functionHistory"></div>
+                <div class="totalHistory"></div>
+            </div><!-- End of History -->
+    
+        </div> <!-- Right Column -->
+    
+    </div><!-- END Calculator Container -->
+    
 </body>
 </html>
