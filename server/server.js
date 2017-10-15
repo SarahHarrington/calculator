@@ -16,10 +16,29 @@ app.post('/alldata', function(req, res){
     var arrayToCalculate = mathArray.allData;
     console.log('arrayToCalculate', arrayToCalculate);
     
-    var a = arrayToCalculate[0];
-    var b = arrayToCalculate[2];
-    
-    res.sendStatus(201);
+    var a = parseInt(arrayToCalculate[0]);
+    var b = parseInt(arrayToCalculate[2]);
+    var total = 0;
+    switch(arrayToCalculate[1]) {
+        case '+':
+            total = a + b;
+            break;
+        case '-':
+            total = a - b;
+            break;
+        case '*':
+            total = a * b;
+            break;
+        case '/':
+            total = a / b;
+            break;
+        default:
+            console.log('this is not valid');
+    }
+    totalSendBack = {
+        totalSent: total
+    }
+    res.send(totalSendBack);
 })
 
 

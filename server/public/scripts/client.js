@@ -56,6 +56,9 @@ function equalsFunction() {
         console.log('response', response);
         appendFunctionToHistory();
         clearDisplay();
+        var totalToDisplay = response.totalSent;
+        $('.display').text(totalToDisplay);
+        calcArray = [''];
     })
     .fail(function(message) {
         console.log('message', message);
