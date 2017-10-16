@@ -82,3 +82,10 @@ function equalsFunction() {
         console.log('message', message);
     })
 }
+
+function getHistory() {
+    $.ajax({
+        method: 'GET',
+        url: '/allData'
+    })
+}
