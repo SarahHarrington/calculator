@@ -1,4 +1,4 @@
-//server set up code
+//server set up variables
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -13,10 +13,21 @@ app.listen(port, function() {
     console.log('listening on port', port);
 })
 
+var historicalFunction;
+var historicalTotal;
+
+var objectForHistory = {
+    historicalFunction: 
+    historicalTotal: 
+}
+
+var allFunctionHistory = [];
+
 //server post
 app.post('/alldata', function(req, res){
     var mathArray = req.body; //data coming through body-parser
-    var arrayToCalculate = mathArray.allData; // 
+    var arrayToCalculate = mathArray.allData;
+    historicalFunction = arrayToCalculate;
 
     //while loop for math functions
     while (arrayToCalculate.length > 1) {
@@ -43,10 +54,13 @@ app.post('/alldata', function(req, res){
         }
         arrayToCalculate.unshift('' + total); //puts the totalled number back on the front
     }
-    
+    historicalTotal = total;
     var totalSendBack = {
         totalSent: total
     }
+    allFunctionHistory.push(objectForHistory);
+    console.log('allFunctionHistory', allFunctionHistory);
+    
     res.send(totalSendBack);
 })
 

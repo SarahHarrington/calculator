@@ -63,7 +63,7 @@ body {
 }
 
 .history {
-    height: auto;
+    height: 310px;
     width: 230px;
     display: flex;
     justify-content: center;
@@ -75,21 +75,23 @@ body {
 }
 
 .functionHistory {
-    height: auto;
+    height: 300px;
     width: 280px;
     display: inline-block;
+    overflow: hidden;
 }
 
 .function {
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .totalHistory {
-    height: auto;
+    height: 300px;
     width: 120px;
     display: inline-block;
+    overflow: hidden;
 }
 
 .total {
