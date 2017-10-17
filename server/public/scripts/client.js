@@ -7,6 +7,7 @@ function readyNow() {
     $('.equalsButton').on('click', equalsFunction);
     $('.backButton').on('click', backBtn);
     $('.clearButton').on('click', clearButton);
+    //appendFullHistory();
 }
 
 //array for button pushes to go in to as strings
@@ -77,12 +78,21 @@ function equalsFunction() {
         $('.display').text(totalToDisplay);
         $('.totalHistory').append('<div class="total">=' + totalToDisplay + '</div>')//appends total to DOM
         getHistory();
+        appendFullHistory();
     })
     .fail(function(message) {
         console.log('message', message);
     })
 }
 
+function appendFullHistory(history) {
+    for (var i = 0; i < history.length; i++) {
+        var maths = history[i];
+        $('.fullHistory').append('<span>' + maths.mathFunction + '</span><span>' + maths.mathTotal + '</span>');
+    }
+}
+
+//requests full history from server
 function getHistory() {
     $.ajax({
         method: 'GET',
