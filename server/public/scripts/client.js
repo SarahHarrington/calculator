@@ -7,7 +7,7 @@ function readyNow() {
     $('.equalsButton').on('click', equalsFunction);
     $('.backButton').on('click', backBtn);
     $('.clearButton').on('click', clearButton);
-    //appendFullHistory();
+    appendFullHistory();
 }
 
 //array for button pushes to go in to as strings
