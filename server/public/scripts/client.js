@@ -71,12 +71,12 @@ function equalsFunction() {
     })
     //receives response and appends to the DOM
     .done(function(response) {
-        console.log('response', response);
         appendFunctionToHistory(); //appends function sent to DOM
         clearDisplay(); //clears display
         totalToDisplay = response.totalSent;
         $('.display').text(totalToDisplay);
         $('.totalHistory').append('<div class="total">=' + totalToDisplay + '</div>')//appends total to DOM
+        getHistory();
     })
     .fail(function(message) {
         console.log('message', message);
@@ -87,5 +87,9 @@ function getHistory() {
     $.ajax({
         method: 'GET',
         url: '/allData'
+    })
+    .done(function(response){
+        var history = response;
+        console.log('history', history);
     })
 }

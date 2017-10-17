@@ -1,18 +1,16 @@
 var express = require('express');
 var router = express.Router();
 
+var historyArray = [];
+
+var maths;
+var mathTotal;
+
 router.post('/', function (req, res) {
-    var mathArray = req.body; //data coming through body-parser
+    var mathArray = req.body; //data coming through body-parse
+    
     var arrayToCalculate = mathArray.allData;
-    var historyArray=[];
-
-    var mathHistory = mathArray;
-    var mathTotal;
-
-    var totalHistory = {
-        mathHistory: mathHistory,
-        mathTotal: mathTotal
-    }
+    maths = arrayToCalculate.join();
 
     //while loop for math functions
     while (arrayToCalculate.length > 1) {
@@ -42,9 +40,19 @@ router.post('/', function (req, res) {
     var totalSendBack = {
         totalSent: total
     }
-    mathTotal = totalSendBack.total;
+    mathTotal = total;
+
+    var totalHistory = {
+        mathFunction: maths,
+        mathTotal: mathTotal
+    }
+
     historyArray.push(totalHistory);
     res.send(totalSendBack);
+})
+
+router.get('/', function(req, res){
+    res.send(historyArray);
 })
 
 module.exports = router;
